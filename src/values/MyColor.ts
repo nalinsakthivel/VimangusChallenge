@@ -10,4 +10,5 @@ export const MyColors = {
   mildBlue: '#B5C0C8',
   secondary: '#727682',
   teritaryText: '#B5C0C8',
+  green: '#03A67F',
 };
