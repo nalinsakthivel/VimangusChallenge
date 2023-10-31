@@ -18,3 +18,4 @@ export {default as Home} from './Home.svg';
 export {default as Leauge} from './Leagues.svg';
 export {default as Research} from './Research.svg';
 export {default as LeardBoard} from './LeaderBoard.svg';
+export {default as Chart} from './Chart.svg';

@@ -15,6 +15,6 @@ export const MyColors = {
   bgRed: '#fadede',
   grey: '#4F4F4F',
   borGrey: '#EEEAF3',
-  mildPrimary: '#f8f5fc',
+  mildPrimary: '#eee9f6',
   goldText: '#FFA600',
 };

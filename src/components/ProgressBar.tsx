@@ -39,27 +39,43 @@ const MultiProgressBar: React.FC<ProgressProps> = ({
   return (
     <View style={styles.mainContainer}>
       {/* Display the success progress bar if 'successCount' is greater than 0 */}
-      <View style={{width: `${successPercentage}%`}}>
-        {successCount !== 0 && (
+      <View
+        style={{
+          width: `${successPercentage}%`,
+          backgroundColor: MyColors.progressSuccess,
+          height: 10,
+          marginVertical: 20,
+          borderTopLeftRadius: 5,
+          borderBottomLeftRadius: 5,
+        }}>
+        {/* {successCount !== 0 && (
           <ProgressBar
             shouldAnimate={true}
             animateDuration={1000}
             data={[{progress: 100, color: MyColors.progressSuccess}]}
             barHeight={10}
           />
-        )}
+        )} */}
       </View>
 
       {/* Display the failure progress bar if 'failureCount' is greater than 0 */}
-      <View style={{width: `${failurePercentage}%`}}>
-        {failureCount !== 0 && (
+      <View
+        style={{
+          width: `${failurePercentage}%`,
+          backgroundColor: MyColors.progressFailure,
+          height: 10,
+          marginVertical: 20,
+          borderTopRightRadius: 5,
+          borderBottomRightRadius: 5,
+        }}>
+        {/* {failureCount !== 0 && (
           <ProgressBar
             shouldAnimate={true}
             animateDuration={1000}
             data={[{progress: 100, color: MyColors.progressFailure}]}
             barHeight={10}
           />
-        )}
+        )} */}
       </View>
     </View>
   );

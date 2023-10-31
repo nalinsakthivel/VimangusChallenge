@@ -4,6 +4,7 @@ import {MyColors} from '../values/MyColor';
 import {screenWidth} from '../utils/CommonUtils';
 import {
   Bitcoin,
+  Chart,
   Clock,
   Coin,
   DownArrow,
@@ -129,7 +130,7 @@ const TodayGamesScreen: React.FC<TodayGamesScreenProps> = (
                 <Text style={styles.detailsText}>355 Players</Text>
               </View>
               <View style={styles.detailsIcon}>
-                <User />
+                <Chart />
                 <Text style={styles.detailsText}>View Chart</Text>
               </View>
             </View>
