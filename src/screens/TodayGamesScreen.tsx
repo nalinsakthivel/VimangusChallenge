@@ -263,7 +263,12 @@ const styles = StyleSheet.create({
     padding: 15,
     justifyContent: 'space-between',
   },
-  chartContainer: {backgroundColor: MyColors.lightGrey, padding: 15},
+  chartContainer: {
+    backgroundColor: MyColors.lightGrey,
+    padding: 15,
+    borderBottomRightRadius: 5,
+    borderBottomLeftRadius: 5,
+  },
   detailsContainer: {flexDirection: 'row', justifyContent: 'space-between'},
   detailsIcon: {
     flexDirection: 'row',
@@ -294,8 +299,10 @@ const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    borderBottomRightRadius: 5,
+    borderBottomLeftRadius: 5,
   },
 });

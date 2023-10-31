@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {ProgressBar} from 'rn-multi-progress-bar'; // Import ProgressBar component
 import {StyleSheet, View} from 'react-native';
 import {MyColors} from '../values/MyColor';
 
@@ -47,16 +46,7 @@ const MultiProgressBar: React.FC<ProgressProps> = ({
           marginVertical: 20,
           borderTopLeftRadius: 5,
           borderBottomLeftRadius: 5,
-        }}>
-        {/* {successCount !== 0 && (
-          <ProgressBar
-            shouldAnimate={true}
-            animateDuration={1000}
-            data={[{progress: 100, color: MyColors.progressSuccess}]}
-            barHeight={10}
-          />
-        )} */}
-      </View>
+        }}></View>
 
       {/* Display the failure progress bar if 'failureCount' is greater than 0 */}
       <View
@@ -67,16 +57,7 @@ const MultiProgressBar: React.FC<ProgressProps> = ({
           marginVertical: 20,
           borderTopRightRadius: 5,
           borderBottomRightRadius: 5,
-        }}>
-        {/* {failureCount !== 0 && (
-          <ProgressBar
-            shouldAnimate={true}
-            animateDuration={1000}
-            data={[{progress: 100, color: MyColors.progressFailure}]}
-            barHeight={10}
-          />
-        )} */}
-      </View>
+        }}></View>
     </View>
   );
 };
