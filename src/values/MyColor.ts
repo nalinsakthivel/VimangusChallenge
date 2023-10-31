@@ -11,4 +11,10 @@ export const MyColors = {
   secondary: '#727682',
   teritaryText: '#B5C0C8',
   green: '#03A67F',
+  bGGreen: '#e1fce8',
+  bgRed: '#fadede',
+  grey: '#4F4F4F',
+  borGrey: '#EEEAF3',
+  mildPrimary: '#f8f5fc',
+  goldText: '#FFA600',
 };

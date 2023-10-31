@@ -56,7 +56,6 @@ export default Button;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    borderWidth: 1,
     height: 40,
     width: '45%',
     borderRadius: 45,

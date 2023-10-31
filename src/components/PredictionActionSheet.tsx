@@ -5,14 +5,18 @@ import {MyColors} from '../values/MyColor';
 import WheelScrollPicker from './WheelScrollPicker';
 import Button from './Button';
 import {Coin} from '../assets/svg';
+import {useNavigation} from '@react-navigation/native';
 
 const PredictionActionSheet = () => {
+  const naivgation = useNavigation();
+
   // Define data for the WheelScrollPicker
   const data = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
   // Function to close the action sheet
   const onClose = () => {
     SheetManager.hide('prediction_sheet');
+    naivgation.navigate('HomeScreen');
   };
 
   // Function to handle the value change in the WheelScrollPicker
