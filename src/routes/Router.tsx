@@ -4,7 +4,6 @@ import {navigationRef} from './RootNavigation';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TodayGamesScreen from '../screens/TodayGamesScreen';
 import PredictionActionSheet from '../components/PredictionActionSheet';
-import ProfileScreen from '../screens/ProfileScreen';
 import TabNavigation from './TabNavigation';
 
 const Router = () => {
@@ -18,7 +17,7 @@ const Router = () => {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {/* Define a screen named "TodayGamesScreen" that uses the TodayGamesScreen component */}
         <Stack.Screen name="TodayGamesScreen" component={TodayGamesScreen} />
-        {/* Define a screen named "ProfileScreen" that uses the ProfileScreen component */}
+        {/* Define a screen named "TabNavigation" that uses the TabNavigation component */}
         <Stack.Screen name="HomeScreen" component={TabNavigation} />
       </Stack.Navigator>
       {/* Render the PredictionActionSheet component outside the navigator for global access */}

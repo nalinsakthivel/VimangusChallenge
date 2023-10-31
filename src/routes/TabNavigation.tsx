@@ -8,32 +8,35 @@ import ResearchScreen from '../screens/ResearchScreen';
 import LeaderBoardScreen from '../screens/LeaderBoardScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
+// Define a functional component called TabNavigation.
 const TabNavigation = () => {
-  const Tab = createBottomTabNavigator();
+  const Tab = createBottomTabNavigator(); // Create a Tab navigator using createBottomTabNavigator.
+
   return (
     <Tab.Navigator
-      initialRouteName="Profile"
+      initialRouteName="Profile" // Set the initial route name to 'Profile'.
       screenOptions={({route}) => ({
         tabBarStyle: {
-          backgroundColor: MyColors.white,
-          height: 60,
+          backgroundColor: MyColors.white, // Set the background color of the tab bar.
+          height: 60, // Set the height of the tab bar.
         },
-        tabBarHideOnKeyboard: true,
         tabBarLabel: ({focused}) => {
           return (
             <Text
               style={{
-                color: focused ? MyColors.primary : MyColors.secondary,
-                fontFamily: 'Montserrat-Bold',
-                fontSize: 10,
+                color: focused ? MyColors.primary : MyColors.secondary, // Set text color based on whether the tab is focused or not.
+                fontFamily: 'Montserrat-Bold', // Set the font family for the tab label.
+                fontSize: 10, // Set the font size for the tab label.
               }}>
-              {route.name}
+              {route.name}{' '}
+              {/* Display the name of the route as the tab label. */}
             </Text>
           );
         },
         tabBarIcon: ({focused}) => {
-          let source = require('../assets/images/home.png');
+          let source = require('../assets/images/home.png'); // Set a default image source.
 
+          // Check the name of the route and set the appropriate image source.
           if (route.name === 'Home') {
             source = require('../assets/images/home.png');
           } else if (route.name === 'Leagues') {
@@ -47,6 +50,7 @@ const TabNavigation = () => {
           } else {
             source = require('../assets/images/home.png');
           }
+
           return (
             <Image
               source={source}
@@ -62,29 +66,29 @@ const TabNavigation = () => {
         tabBarInactiveTintColor: MyColors.secondary,
       })}>
       <Tab.Screen
-        name={'Home'}
-        options={{headerShown: false}}
-        component={HomeScreen}
+        name={'Home'} // Define the name for the 'Home' tab.
+        options={{headerShown: false}} // Hide the header for this screen.
+        component={HomeScreen} // Use the HomeScreen component for this tab.
       />
       <Tab.Screen
-        name={'Leagues'}
-        options={{headerShown: false}}
-        component={LeaguesScreen}
+        name={'Leagues'} // Define the name for the 'Leagues' tab.
+        options={{headerShown: false}} // Hide the header for this screen.
+        component={LeaguesScreen} // Use the LeaguesScreen component for this tab.
       />
       <Tab.Screen
-        name={'Research'}
-        options={{headerShown: false}}
-        component={ResearchScreen}
+        name={'Research'} // Define the name for the 'Research' tab.
+        options={{headerShown: false}} // Hide the header for this screen.
+        component={ResearchScreen} // Use the ResearchScreen component for this tab.
       />
       <Tab.Screen
-        name={'Leaderboard'}
-        options={{headerShown: false}}
-        component={LeaderBoardScreen}
+        name={'Leaderboard'} // Define the name for the 'Leaderboard' tab.
+        options={{headerShown: false}} // Hide the header for this screen.
+        component={LeaderBoardScreen} // Use the LeaderBoardScreen component for this tab.
       />
       <Tab.Screen
-        name={'Profile'}
-        options={{headerShown: false}}
-        component={ProfileScreen}
+        name={'Profile'} // Define the name for the 'Profile' tab.
+        options={{headerShown: false}} // Hide the header for this screen.
+        component={ProfileScreen} // Use the ProfileScreen component for this tab.
       />
     </Tab.Navigator>
   );
