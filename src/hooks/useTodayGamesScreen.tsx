@@ -1,8 +1,8 @@
 import {SheetManager} from 'react-native-actions-sheet';
-import {TodayGamesProps} from '../screens/TodayGames';
+import {TodayGamesScreenProps} from '../screens/TodayGamesScreen';
 
 // Define a custom hook called 'useTodayGames' that takes 'TodayGamesProps' as a parameter
-export const useTodayGames = (props: TodayGamesProps) => {
+export const useTodayGamesScreen = (props: TodayGamesScreenProps) => {
   // Define a function 'onUpPress' that will be used to show the action sheet
   const onUpPress = () => {
     SheetManager.show('prediction_sheet');

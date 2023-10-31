@@ -3,7 +3,7 @@ import {
   SafeAreaProvider,
   initialWindowMetrics,
 } from 'react-native-safe-area-context';
-import Router from './src/routes/Routes';
+import Router from './src/routes/Router';
 import {StatusBar} from 'react-native';
 import {MyColors} from './src/values/MyColor';
 

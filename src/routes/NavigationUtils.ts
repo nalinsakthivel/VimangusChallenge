@@ -1,3 +1,3 @@
 export type NavigationParamList = {
-  TodayGames: any;
+  TodayGamesScreen: any;
 };

@@ -17,15 +17,20 @@ import MultiProgressBar from '../components/ProgressBar';
 import {RouteProp} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationParamList} from '../routes/NavigationUtils';
-import {useTodayGames} from '../hooks/useTodayGames';
+import {useTodayGamesScreen} from '../hooks/useTodayGamesScreen';
 
-export type TodayGamesProps = {
-  navigation: NativeStackNavigationProp<NavigationParamList, 'TodayGames'>;
-  route: RouteProp<NavigationParamList, 'TodayGames'>;
+export type TodayGamesScreenProps = {
+  navigation: NativeStackNavigationProp<
+    NavigationParamList,
+    'TodayGamesScreen'
+  >;
+  route: RouteProp<NavigationParamList, 'TodayGamesScreen'>;
 };
 
-const TodayGames: React.FC<TodayGamesProps> = (props: TodayGamesProps) => {
-  const {onUpPress, onDownPress} = useTodayGames(props);
+const TodayGamesScreen: React.FC<TodayGamesScreenProps> = (
+  props: TodayGamesScreenProps,
+) => {
+  const {onUpPress, onDownPress} = useTodayGamesScreen(props);
 
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -143,7 +148,7 @@ const TodayGames: React.FC<TodayGamesProps> = (props: TodayGamesProps) => {
   );
 };
 
-export default TodayGames;
+export default TodayGamesScreen;
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -170,6 +175,7 @@ const styles = StyleSheet.create({
   infoText: {
     fontSize: 12,
     fontFamily: 'Montserrat-Regular',
+    color: MyColors.white,
   },
   infoContainer: {
     flexDirection: 'row',
@@ -190,10 +196,22 @@ const styles = StyleSheet.create({
     width: '45%',
     justifyContent: 'space-around',
   },
-  timeText: {fontSize: 12, fontFamily: 'Montserrat-Thin'},
-  timerText: {fontSize: 14, fontFamily: 'Montserrat-Regular'},
+  timeText: {
+    fontSize: 12,
+    fontFamily: 'Montserrat-Thin',
+    color: MyColors.white,
+  },
+  timerText: {
+    fontSize: 14,
+    fontFamily: 'Montserrat-Regular',
+    color: MyColors.white,
+  },
   priceContainer: {marginLeft: 5, width: '70%'},
-  priceHeadingText: {fontSize: 14, fontFamily: 'Montserrat-Regular'},
+  priceHeadingText: {
+    fontSize: 14,
+    fontFamily: 'Montserrat-Regular',
+    color: MyColors.white,
+  },
   priceText: {
     fontSize: 14,
     fontFamily: 'Montserrat-Bold',
@@ -201,8 +219,7 @@ const styles = StyleSheet.create({
   },
   priceTextAddons: {
     fontSize: 14,
-    fontFamily: 'Montserrat-Regular',
-    fontWeight: '600',
+    fontFamily: 'Montserrat-Medium',
   },
   bitcoinContainer: {position: 'absolute', bottom: 0, right: 0},
   bottomContainer: {
